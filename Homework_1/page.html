@@ -1,31 +1,61 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-    <meta charset="UTF-8">
-    <title>todo</title>   
+    <meta charset="utf-8"/>
+    <title>todos</title>
 </head>
 <body>
-<table>
-<div class="container">
-    <h1>Todos</h1>
-
-         <div class="list">
-             <div class="text_add">
-                 <input type="text" placeholder="Whats else?">
-                 <button>Add</button>
-             </div>
-
-             <input type="checkbox" name="option3" value="cb_css">CSS<br>
-             <input type="checkbox" name="option3" value="cb_java">Java<br>
-             <input type="checkbox" name="option3" value="cb_html">HTML<br><br>
-
-             <input type="button" name="option3" value="All">
-             <input type="button" name="option3" value="Active">
-             <input type="button" name="option3" value="Complited">
-         </div>
+    <div class = "header">
+		<h1>todos</h1>
+	</div>
+	
+	<div class = "input_area">
+		<button aria-label="Mark all tasks">Mark All</button>
+		<input placeholder="What need's to be done?"/>
+	</div>
+	
+	<div class = "todos_area">
+		<div class = "todo">
+			<input type="checkbox" checked="checked" aria-label="Check as completed" />
+			<input placeholder="CSS"/>
+			<button aria-label="Delete todo">DELETE</button>
+		</div>
+		
+		<div class = "todo">
+			<input type="checkbox" checked="unchecked" aria-label="Check as completed" />
+			<input placeholder="JS"/>
+			<button aria-label="Delete todo">DELETE</button>
+		</div> 
+		
+		<div class = "todo">
+			<input type="checkbox" checked="checked" aria-label="Check as completed" />
+			<input placeholder="HTML"/>
+			<button aria-label="Delete todo">DELETE</button>
+		</div> 
+	</div>
+	<div class="footer">
+		<div class="left_todos" aria-label="Amount of unchecked todos">
+			2 todo
+		</div>
+		<div class="todos-filters">		
+			<button class="filter" data-filter="all" aria-label="Show all todos">
+				All
+			</button>
+			
+			<button class="filter" data-filter="ready" aria-label="Show unchecked todos">
+				Active
+			</button>
+			
+			<button class="filter" data-filter="unready" aria-label="Show checked todos">
+				Completed
+			</button>
+		</div>
+	</div>
+	<button class="delete checked">
+		Clear Completed
+	</button>
 </div>
-</table>
-
-
+	
+    
 </body>
 </html>
